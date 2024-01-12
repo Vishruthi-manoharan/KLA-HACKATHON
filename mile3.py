@@ -32,7 +32,7 @@ def generate_die_indices_and_llc(wafer_diameter, die_size_x, die_size_y, die_shi
                 # Append die index and LLC to the list
                 die_indices_llc.append((die_index, (round(llc_x, 4), round(llc_y, 4))))
 
-        
+                # Write die index and LLC to the text file
                 file.write(f"({i},{j}):({round(llc_x, 4)},{round(llc_y, 4)})\n")
 
     return die_indices_llc
