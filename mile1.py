@@ -1,9 +1,9 @@
 import numpy as np
 
-def generate_equally_spaced_points(diameter_mm, num_points, angle_deg):
+def generate_points(diameter, num_points, angle_deg):
     angle_rad = np.radians(angle_deg)
     # Calculate radius based on the diameter
-    radius = diameter_mm / 2.0
+    radius = diameter / 2.0
     # Generate equally spaced distances along the line at the specified angle
     distances = np.linspace(-radius, radius, num_points)
     # Calculate x and y coordinates for each point
@@ -12,12 +12,12 @@ def generate_equally_spaced_points(diameter_mm, num_points, angle_deg):
 
     return x_coords, y_coords
 
-wafer_diameter_mm = 300  # Replace with your wafer diameter
+wafer_diameter = 300  # Replace with your wafer diameter
 num_points = 30         # Replace with the desired number of points
 angle_degrees = 0      # Replace with the desired angle
 
 # Generate equally spaced points
-x_coords, y_coords = generate_equally_spaced_points(wafer_diameter_mm, num_points, angle_degrees)
+x_coords, y_coords = generate_points(wafer_diameter, num_points, angle_degrees)
 
 # Save the output to a text file
 output_file = 'equally_spaced_points.txt'
