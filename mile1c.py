@@ -12,14 +12,14 @@ def generate_points(diameter, num_points, angle_deg):
 
     return x_coords, y_coords
 
-wafer_diameter = 300  
-num_points = 30         
-angle_degrees = 0      
+wafer_diameter = 200  
+num_points = 25         
+angle_degrees = 250      
 
 # Generate equally spaced points
 x_coords, y_coords = generate_points(wafer_diameter, num_points, angle_degrees)
 
-output_file = 'equally_spaced_points.txt'
+output_file = 'equally_spaced_points2.txt'
 with open(output_file, 'w') as file:
     for x, y in zip(x_coords, y_coords):
         file.write(f"({x:.4f}, {y:.4f})\n")
