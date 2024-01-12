@@ -12,14 +12,13 @@ def generate_points(diameter, num_points, angle_deg):
 
     return x_coords, y_coords
 
-wafer_diameter = 300  # Replace with your wafer diameter
-num_points = 30         # Replace with the desired number of points
-angle_degrees = 0      # Replace with the desired angle
+wafer_diameter = 200  
+num_points = 25         
+angle_degrees = 250      
 
 # Generate equally spaced points
 x_coords, y_coords = generate_points(wafer_diameter, num_points, angle_degrees)
 
-# Save the output to a text file
 output_file = 'equally_spaced_points.txt'
 with open(output_file, 'w') as file:
     for x, y in zip(x_coords, y_coords):
